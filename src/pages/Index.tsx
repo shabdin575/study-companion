@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import SplashScreen from "@/components/SplashScreen";
+import Schedule from "@/pages/Schedule";
 
 const Index = () => {
+  const [showSplash, setShowSplash] = useState(true);
+
+  // Check if splash was shown today
+  useEffect(() => {
+    const today = new Date().toISOString().split("T")[0];
+    const lastShown = localStorage.getItem("splash-last-shown");
+    
+    if (lastShown === today) {
+      setShowSplash(false);
+    }
+  }, []);
+
+  const handleSplashComplete = () => {
+    const today = new Date().toISOString().split("T")[0];
+    localStorage.setItem("splash-last-shown", today);
+    setShowSplash(false);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <AnimatePresence>
+        {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      </AnimatePresence>
+      
+      {!showSplash && <Schedule />}
+    </>
   );
 };
 

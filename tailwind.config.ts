@@ -7,12 +7,16 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        course: {
+          math: "hsl(var(--course-math))",
+          "math-light": "hsl(var(--course-math-light))",
+          physics: "hsl(var(--course-physics))",
+          "physics-light": "hsl(var(--course-physics-light))",
+          biology: "hsl(var(--course-biology))",
+          "biology-light": "hsl(var(--course-biology-light))",
+          chemistry: "hsl(var(--course-chemistry))",
+          "chemistry-light": "hsl(var(--course-chemistry-light))",
+          computing: "hsl(var(--course-computing))",
+          "computing-light": "hsl(var(--course-computing-light))",
+          communication: "hsl(var(--course-communication))",
+          "communication-light": "hsl(var(--course-communication-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,20 +83,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
