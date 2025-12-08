@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { loveNotes } from "@/data/scheduleData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, RefreshCw, MapPin } from "lucide-react";
+import ReunionCountdown from "@/components/ReunionCountdown";
 
 const Love = () => {
   const [currentNote, setCurrentNote] = useState(0);
@@ -40,11 +41,14 @@ const Love = () => {
           </p>
         </motion.div>
 
+        {/* Reunion Countdown */}
+        <ReunionCountdown />
+
         {/* Love Note Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="relative overflow-hidden rounded-3xl gradient-love p-8 shadow-glow"
+          className="relative overflow-hidden rounded-3xl gradient-love p-8 shadow-glow mt-6"
         >
           {/* Decorative Hearts */}
           <div className="absolute top-4 right-4 opacity-20">
