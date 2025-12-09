@@ -1,4 +1,4 @@
-import { Calendar, BookOpen, CheckSquare, Heart, Sparkles } from "lucide-react";
+import { Calendar, BookOpen, CheckSquare, Heart, MoreHorizontal } from "lucide-react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
@@ -6,8 +6,8 @@ const navItems = [
   { to: "/", icon: Calendar, label: "Schedule" },
   { to: "/subjects", icon: BookOpen, label: "Subjects" },
   { to: "/checklist", icon: CheckSquare, label: "Tasks" },
-  { to: "/prayer", icon: Sparkles, label: "Prayer" },
   { to: "/love", icon: Heart, label: "Love" },
+  { to: "/more", icon: MoreHorizontal, label: "More" },
 ];
 
 const BottomNav = () => {

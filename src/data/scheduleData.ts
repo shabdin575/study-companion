@@ -16,9 +16,8 @@ export const weekSchedule = [
     day: "Tuesday",
     focus: "Math, Chemistry & Biology",
     blocks: [
-      { time: "05:00-05:50", subject: "MA 110", code: "MA 110", task: "Formula Derivation", course: "math" as const },
-      { time: "05:50-06:05", subject: "Morning Break", code: "", task: "Rest & Refresh", course: "break" as const },
-      { time: "06:05-06:45", subject: "CH 110", code: "CH 110", task: "Conceptual Review", course: "chemistry" as const },
+      { time: "04:30-05:30", subject: "MA 110", code: "MA 110", task: "Formula Derivation (Early - Class at 7am)", course: "math" as const },
+      { time: "05:30-07:00", subject: "Get Ready", code: "", task: "Prepare for Class", course: "break" as const },
       { time: "17:00-20:00", subject: "Dinner & Rest", code: "", task: "Recovery Time", course: "break" as const },
       { time: "20:00-20:50", subject: "BI 110", code: "BI 110", task: "Diagram/Vocab Drill", course: "biology" as const },
       { time: "20:50-21:10", subject: "Break", code: "", task: "Mental Recovery", course: "break" as const },
@@ -42,9 +41,8 @@ export const weekSchedule = [
     day: "Thursday",
     focus: "Chemistry & Physics",
     blocks: [
-      { time: "05:00-05:50", subject: "CH 110", code: "CH 110", task: "Problem Set (Stoich.)", course: "chemistry" as const },
-      { time: "05:50-06:05", subject: "Morning Break", code: "", task: "Rest & Refresh", course: "break" as const },
-      { time: "06:05-06:45", subject: "PH 110", code: "PH 110", task: "Problem Drill", course: "physics" as const },
+      { time: "04:30-05:30", subject: "CH 110", code: "CH 110", task: "Problem Set (Early - Class at 7am)", course: "chemistry" as const },
+      { time: "05:30-07:00", subject: "Get Ready", code: "", task: "Prepare for Class", course: "break" as const },
       { time: "17:00-20:00", subject: "Dinner & Rest", code: "", task: "Recovery Time", course: "break" as const },
       { time: "20:00-20:50", subject: "PH 110", code: "PH 110", task: "Problem Drill/Lecture Prep", course: "physics" as const },
       { time: "20:50-21:10", subject: "Break", code: "", task: "Mental Recovery", course: "break" as const },
@@ -150,7 +148,7 @@ export const subjects = [
 ];
 
 export const dailyChecklist = [
-  { id: "morning", label: "Complete 05:00-06:45 morning focus session (with break)", icon: "☀️" },
+  { id: "morning", label: "Complete morning focus session (5am or 4:30am on Tue/Thu)", icon: "☀️" },
   { id: "dinner", label: "Take the essential 17:00-20:00 dinner/rest break", icon: "🍽️" },
   { id: "break", label: "Take the mandatory 20:50-21:10 break", icon: "☕" },
   { id: "evening", label: "Complete 20:00-22:00 deep evening focus session", icon: "🌙" },
@@ -189,4 +187,33 @@ export const loveNotes = [
   "The distance between us is just a test to see how far love can travel. Ours goes beyond the stars! 🌟",
   "Every moment of hard work today is a step towards our tomorrow together. Keep going! 🚀",
   "You're not just studying for yourself – you're building our future. I believe in you! 💖",
+];
+
+export const motivationalQuotes = [
+  { quote: "The expert in anything was once a beginner.", author: "Helen Hayes" },
+  { quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+  { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+  { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { quote: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+  { quote: "Education is the most powerful weapon which you can use to change the world.", author: "Nelson Mandela" },
+  { quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+  { quote: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+  { quote: "You are braver than you believe, stronger than you seem, and smarter than you think.", author: "A.A. Milne" },
+  { quote: "With God all things are possible.", author: "Matthew 19:26" },
+  { quote: "I can do all things through Christ who strengthens me.", author: "Philippians 4:13" },
+  { quote: "The Lord is my strength and my shield.", author: "Psalm 28:7" },
+];
+
+export const specialDates = [
+  { id: "reunion", name: "Next Reunion", date: "2025-03-15", icon: "heart" },
+  { id: "anniversary", name: "Anniversary", date: "2025-02-14", icon: "sparkles" },
+  { id: "birthday", name: "Your Birthday", date: "2025-06-20", icon: "cake" },
+];
+
+export const moodOptions = [
+  { id: "amazing", label: "Amazing", color: "text-green-500" },
+  { id: "happy", label: "Happy", color: "text-yellow-500" },
+  { id: "okay", label: "Okay", color: "text-blue-500" },
+  { id: "tired", label: "Tired", color: "text-orange-500" },
+  { id: "stressed", label: "Stressed", color: "text-red-500" },
 ];

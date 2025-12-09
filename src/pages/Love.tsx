@@ -4,6 +4,8 @@ import { loveNotes } from "@/data/scheduleData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, RefreshCw, MapPin } from "lucide-react";
 import ReunionCountdown from "@/components/ReunionCountdown";
+import MoodTracker from "@/components/MoodTracker";
+import SpecialDatesCountdown from "@/components/SpecialDatesCountdown";
 
 const Love = () => {
   const [currentNote, setCurrentNote] = useState(0);
@@ -108,6 +110,16 @@ const Love = () => {
             <br />
             Shabdin 💕
           </p>
+        </motion.div>
+
+        {/* Mood Tracker */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-6 p-5 bg-card rounded-2xl shadow-soft"
+        >
+          <MoodTracker />
         </motion.div>
 
         {/* Stats */}
